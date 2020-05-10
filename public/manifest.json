@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "World of Warcraf - PWA",
+  "name": "PWA application using WoW API's",
   "icons": [
     {
       "src": "favicon.ico",

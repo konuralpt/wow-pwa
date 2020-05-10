@@ -1,0 +1,140 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "arrow-parens": [
+      "warn",
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id",
+          "_doc",
+          "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__",
+          "_coordinates"
+        ]
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "no-prototype-builtins": "warn",
+    "no-restricted-properties": "off",
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["draft", "state", "draftState"] }],
+    "operator-linebreak": "off",
+    "brace-style": [
+      "error",
+      "stroustrup"
+    ],
+    "indent": [
+      "error",
+      2,
+      { "SwitchCase": 1 }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 160,
+        "tabWidth": 2
+      }
+    ],
+    "strict": [
+      "error",
+      "global"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/prop-types": [
+      0
+    ],
+    "react/destructuring-assignment": [
+      "off"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      { "multiline": true }
+    ],
+    "react/jsx-props-no-spreading": ["error", {
+      "custom": "ignore"
+    }],
+    "react/forbid-prop-types": [
+      2,
+      {"forbid": ["array"]}
+    ],
+    "import/prefer-default-export": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {},
+      "globals": {
+        "moment": true,
+        "document": true,
+        "window": true,
+        "localStorage": true
+      }
+    }
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "16.12.0"
+    },
+    "import/resolver": {
+      "alias": [
+        ["@app", "./src/"],
+        // ["@app-redux", "./app/redux/"],
+        // ["@app-containers", "./app/containers/"],
+        ["@app-components", "./src/components/"],
+        ["@app-pages", "./src/pages/"],
+        // ["@app-redux", "./app/redux/"],
+        // ["@app-sagas", "./app/sagas/"],
+        // ["@app-services", "./app/services/"],
+        // ["@app-api", "./app/api/"],
+        // ["@app-axios", "./app/axios/"],
+        // ["@app-images", "./public/images/"],
+        // ["@app-styles", "./app/styles/"],
+        // ["@app-utils", "./app/utils/"],
+        // ["@app-hooks", "./app/hooks/"],
+        ["@public", "./public/"]
+      ]
+    }
+  }
+}
