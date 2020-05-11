@@ -121,7 +121,7 @@
       "alias": [
         ["@app", "./src/"],
         // ["@app-redux", "./app/redux/"],
-        // ["@app-containers", "./app/containers/"],
+        ["@app-containers", "./src/containers/"],
         ["@app-components", "./src/components/"],
         ["@app-pages", "./src/pages/"],
         // ["@app-redux", "./app/redux/"],
@@ -131,7 +131,7 @@
         // ["@app-axios", "./app/axios/"],
         // ["@app-images", "./public/images/"],
         // ["@app-styles", "./app/styles/"],
-        // ["@app-utils", "./app/utils/"],
+        ["@app-utils", "./src/utils/"],
         // ["@app-hooks", "./app/hooks/"],
         ["@public", "./public/"]
       ]

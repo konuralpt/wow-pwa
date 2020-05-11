@@ -26,8 +26,19 @@ module.exports = {
          {
             test: /\.(png|j?g|svg|gif)?$/,
             use: 'file-loader'
-         }
-]
+         },
+         {
+            test: /\.less$/,
+            use: [{
+              loader: 'style-loader',
+            }, {
+              loader: 'css-loader', // translates CSS into CommonJS
+            }, {
+              loader: 'less-loader', // compiles Less to CSS
+            }
+            ]
+         },
+      ],
    },
    resolve: {
     modules: ['node_modules', 'app'],
@@ -36,7 +47,7 @@ module.exports = {
     alias: {
       '@app': path.resolve(__dirname, './src/'),
       '@app-components': path.resolve(__dirname, './src/components/'),
-      // '@app-containers': path.resolve(__dirname, '../../app/containers/'),
+      '@app-containers': path.resolve(__dirname, './src/containers/'),
       '@app-pages': path.resolve(__dirname, './src/pages/'),
       // '@app-redux': path.resolve(__dirname, '../../app/redux/'),
       // '@app-sagas': path.resolve(__dirname, '../../app/sagas/'),
@@ -45,7 +56,7 @@ module.exports = {
       // '@app-axios': path.resolve(__dirname, '../../app/axios/'),
       // '@app-images': path.resolve(__dirname, '../../public/images/'),
       // '@app-styles': path.resolve(__dirname, '../../app/styles/'),
-      // '@app-utils': path.resolve(__dirname, '../../app/utils/'),
+      '@app-utils': path.resolve(__dirname, './src/utils/'),
       // '@app-hooks': path.resolve(__dirname, '../../app/hooks/'),
       '@public': path.resolve(__dirname, './public/'),
     },
